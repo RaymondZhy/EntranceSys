@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3695f3</color>
+    <color name="colorPrimaryLight">#6060f3</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="common_app_bg">#f3f3f3</color>
+
+    <color name="text_tittle">#333333</color>
+    <color name="text_content">#969696</color>
+    <color name="text_hint">#c3c3c3</color>
+
+    <color name="common_textColor">#333333</color>
+    <color name="common_editTextColor">#333333</color>
+    <color name="common_textColorHint">#c3c3c3</color>
+
+    <color name="common_scroller">#66098ac1</color>
+
+    <!-- 分割线 -->
+    <color name="common_divider">#e2e2e2</color>
+
+    <color name="transparent">#00000000</color> <!-- 透明 -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ffff4444</color>
+    <color name="green">#98D57C</color> <!-- 绿色 -->
+    <color name="blue">#3695f3</color> <!-- 蓝色 -->
+    <color name="gray">#dbdbdb</color> <!-- 蓝色 -->
+
+
+    <color name="tab_bg">#F3F5F4</color>
+    <color name="selector_grey">#DDDDDD</color>
+
+    <color name="common_grey">#969696</color>
+    <color name="status_color_blue">#3695f3</color>
+
+    <color name="tab_selected_color">#3695f3</color>
+
+    <color name="tab_text_unselected_color">#ff222222</color>
+
+    <color name="tab_layout_divider">#ffe8e8e8</color>
+
+    <color name="pressed_color">#60C0C0C0</color>
+
+    <!--PhotoPickerActivity-->
+    <color name="photo_picker_color_1">#373A3D</color>
+
+    <!--ImagePreviewActivity-->
+    <color name="image_preview_color">#30000000</color>
+
+    <!--QrScanActivity-->
+    <color name="color_qr_scan_1">#99000000</color>
+    <color name="scan_corner_color">#0effc2</color>
+
+    <!--ModuleActivity-->
+    <color name="module_nav_bg">#dbdbdb</color>
+</resources>

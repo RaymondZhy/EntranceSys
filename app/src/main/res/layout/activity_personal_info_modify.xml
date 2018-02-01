@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_bg"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.PersonalInfoModifyActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_activity_info_modify"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_bar_textSize" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:text="@string/personal_info_modify_str_1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/divider_top_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_page_left"
+        android:paddingRight="@dimen/margin_page_right">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:maxLength="20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:paddingLeft="@dimen/margin_page_left"
+        android:paddingRight="@dimen/margin_page_right">
+
+        <EditText
+            android:id="@+id/et_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/btn_verify_code"
+            android:background="@color/white"
+            android:gravity="left|center_vertical"
+            android:hint="@string/personal_info_modify_str_3"
+            android:lines="1"
+            android:maxLength="20" />
+
+        <com.newabel.entrancesys.ui.widget.VerifyCodeButton
+            android:id="@+id/btn_verify_code"
+            android:layout_width="@dimen/dp_110"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_info_modify_str_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</LinearLayout>

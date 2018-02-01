@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_bg"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.PwdModifyActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_old_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/divider_top_height"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_page_left"
+        android:paddingRight="@dimen/margin_page_right">
+
+        <TextView
+            android:id="@+id/tv_old_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/pwd_modify_str_1"
+            android:textColor="@color/text_tittle"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/et_old_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/tv_old_pwd"
+            android:background="@color/white"
+            android:digits="@string/pwd_input_filter"
+            android:hint="@string/pwd_modify_str_2"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="@color/text_tittle"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_new_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/pwd_modify_str_3"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv_new_pwd"
+                android:background="@color/white"
+                android:digits="@string/pwd_input_filter"
+                android:hint="@string/pwd_modify_str_4"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLength="20"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_confirm_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/pwd_modify_str_5"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_confirm_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv_confirm_pwd"
+                android:background="@color/white"
+                android:digits="@string/pwd_input_filter"
+                android:hint="@string/pwd_modify_str_6"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLength="20"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/margin_page_left"
+        android:layout_marginRight="@dimen/margin_page_right"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/pwd_modify_str_7"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

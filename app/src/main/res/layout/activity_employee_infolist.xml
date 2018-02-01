@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/divider_top_height"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="编         号"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="00003"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="姓         名"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="李达康"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="性         别"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/et_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text="男"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_belong_dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="所属机构"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_belong_dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="一营"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_emp_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_person_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="人员类型"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/et_person_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text="民警"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_certif_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_certif_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="证件类型"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/et_certif_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text="身份证"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_certif_num"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_certif_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="证件号码"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_certif_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="41111120053659698x"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="手机号码"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="18812345678"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/margin_page_right"
+            android:layout_marginRight="@dimen/margin_page_right"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

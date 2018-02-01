@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.UpdateContentActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <EditText
+        android:id="@+id/et_update_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_page_left"
+        android:paddingRight="@dimen/margin_page_right"
+        android:paddingTop="@dimen/dp_12"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_tittle"
+        android:enabled="false"
+        android:gravity="left|top"
+        android:background="@color/white"
+        />
+
+</LinearLayout>

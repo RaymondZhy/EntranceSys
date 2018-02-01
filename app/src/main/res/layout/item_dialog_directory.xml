@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10"
+    android:background="@drawable/selector_click_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_1"
+    >
+
+    <ImageView
+        android:id="@+id/iv_dir_cover"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginRight="10dip"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cb_select"
+        android:layout_toRightOf="@+id/iv_dir_cover"
+        android:layout_centerVertical="true"
+        >
+
+        <TextView
+            android:textColor="@color/text_tittle"
+            android:id="@+id/tv_dir_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图片和视频"
+            />
+        <TextView
+            android:textColor="@color/text_content"
+            android:id="@+id/tv_dir_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="3张"
+            />
+
+    </LinearLayout>
+
+    <com.newabel.entrancesys.ui.widget.PhotoCheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        app:cb_stroke_color="@color/green"
+        app:cb_inner_shape="dot"
+        app:cb_dot_radius="@dimen/dp_5"
+        app:cb_inner_shape_color="@color/green"
+        android:checked="true"
+        />
+
+</RelativeLayout>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:layout_marginTop="@dimen/dp_1"
+    android:background="@drawable/selector_click_style"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/margin_page_left"
+    android:paddingRight="@dimen/margin_page_right">
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_tittle"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

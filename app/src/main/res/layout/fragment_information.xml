@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/status_color_blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tab_infor"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_bar_textSize" />
+
+    </RelativeLayout>
+
+    <com.newabel.entrancesys.ui.widget.TabLayout
+        android:id="@+id/tab_infor"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/tab_selected_color"
+        app:tabSelectedTextColor="@color/tab_selected_color"
+        app:tabTextAppearance="@style/TextAppearanceHome"
+        android:visibility="gone"
+        app:tabTextColor="@color/text_tittle" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_infor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

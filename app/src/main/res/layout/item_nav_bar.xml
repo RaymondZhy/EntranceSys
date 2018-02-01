@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <com.newabel.entrancesys.ui.widget.NavBarView
+        android:id="@+id/nv_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        app:nbv_arrow_color="@color/text_content"
+        app:nbv_arrow_width="@dimen/dp_1"
+        app:nbv_bg_color="#dbdbdb"
+        app:nbv_text_color="@color/text_content"
+        app:nbv_text_padding="@dimen/dp_5"
+        app:nbv_text_size="@dimen/sp_14" />
+</LinearLayout>

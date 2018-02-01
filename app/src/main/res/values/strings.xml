@@ -1,0 +1,539 @@
+<resources>
+    <string name="app_name">门禁系统</string>
+    <string name="splash_text">I am splash!</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_video">视频</string>
+    <string name="tab_micro">微头条</string>
+    <string name="tab_me">我的</string>
+    <string name="search_you_want_to_search">搜你想搜的</string>
+    <string name="tab_infor">消息</string>
+
+    <string name="loading">正在加载中...</string>
+    <string name="load_failed">加载失败，请点我重试</string>
+    <string name="load_complete">没有更多数据了</string>
+    <string name="load_empty">暂无数据</string>
+    <string name="load_no_network_1">网络连接异常</string>
+    <string name="load_no_network_2">请检查网络后重试</string>
+    <string name="load_error">加载出错了，请点击重试!</string>
+
+    <!--NetWork-->
+    <string name="network_all_closed">当前无可用网络</string>
+    <string name="network_timeout">网络连接超时，请检查网络</string>
+    <string name="network_not_found">服务器异常，请稍后再试</string>
+    <!--dialog-->
+    <string name="dialog_positive">确定</string>
+    <string name="dialog_negative">取消</string>
+
+    <!--数据插叙失败提醒-->
+    <string name="realm_insert_fail">数据插入失败</string>
+
+    <!--权限提醒-->
+    <string name="permission_str">所需权限被禁止，软件功能可能存在异常</string>
+
+    <!--登陆过期提醒-->
+    <string name="login_expired_tip">登陆凭证已过期，请重新登陆</string>
+
+    <!--删除确认-->
+    <string name="dialog_title_delete">删除确认</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+
+    <string name="next_step">下一步</string>
+    <string name="submit">提交</string>
+
+    <string name="title_fragment_me">我的</string>
+    <string name="title_activity_personal_info">个人信息</string>
+    <string name="title_activity_info_modify">个人信息修改</string>
+    <string name="title_activity_notification_setting">新消息通知设置</string>
+    <string name="title_activity_photo_picker">图片选择</string>
+    <string name="title_activity_image_preview">图片预览</string>
+    <string name="title_activity_pwd_modify">修改密码</string>
+    <string name="title_activity_language">语言选择</string>
+    <string name="title_activity_about_us">关于我们</string>
+    <string name="title_activity_update_desc">更新说明</string>
+    <string name="title_activity_update_content">更新内容</string>
+    <string name="title_activity_qr_card">我的二维码</string>
+    <string name="title_activity_qr_scan">扫一扫</string>
+    <string name="title_activity_login">登陆</string>
+    <string name="title_activity_ip_setting">IP设置</string>
+    <string name="title_activity_forget_pwd">忘记密码</string>
+    <string name="title_activity_register">注册用户</string>
+    <string name="title_activity_men_manage">人员管理</string>
+    <string name="title_activity_module">所有功能</string>
+    <string name="title_activity_search_record">搜索</string>
+    <string name="title_activity_entrance_data">门禁资料</string>
+    <string name="title_activity_entrance_event">门禁事件</string>
+    <string name="title_activity_entrance_control">门禁控制</string>
+    <string name="title_activity_zone_detail">区域资料</string>
+    <string name="title_activity_device_data">设备资料</string>
+    <string name="title_activity_add_new_device">新增设备</string>
+    <string name="title_activity_register_record">申请记录</string>
+    <string name="title_activity_register_data">申请资料</string>
+    <string name="title_activity_register_progress">申请进度</string>
+    <string name="title_activity_register_basic_data">基本资料</string>
+    <string name="title_activity_register_qualification">资质信息</string>
+    <string name="title_activity_register_view">注册审核</string>
+    <string name="title_activity_register_comment">审核</string>
+    <string name="title_activity_order_repair">维修单据</string>
+    <string name="title_activity_order_reply">单据回复</string>
+
+    <!--密码输入过滤-->
+    <string name="pwd_input_filter">1234567890abcdefghijklmnopqrstuvwxyz·~!@#$%^*()_+=-\|'";:/?>.,</string>
+
+    <!--MeFragment-->
+    <string name="me_str_1">新消息通知设置</string>
+    <string name="me_str_2">修改密码</string>
+    <string name="me_str_3">语言选择</string>
+    <string name="me_str_4">关于我们</string>
+    <string name="me_str_5">退出登陆</string>
+    <string name="me_str_6">确定退出当前账号吗？</string>
+
+    <!--PersonalInfoActivity-->
+    <string name="personal_info_str_1">头像</string>
+    <string name="personal_info_str_2">账号</string>
+    <string name="personal_info_str_3">昵称</string>
+    <string name="personal_info_str_4">姓名</string>
+    <string name="personal_info_str_5">二维码名片</string>
+    <string name="personal_info_str_6">性别</string>
+    <string name="personal_info_str_7">电话</string>
+    <string name="personal_info_str_8">手机</string>
+    <string name="personal_info_str_9">邮箱</string>
+    <string name="personal_info_str_10">人员编号</string>
+    <string name="personal_info_str_11">所属机构</string>
+    <string name="personal_info_str_12">人员类型</string>
+    <string name="personal_info_str_13">修改昵称</string>
+    <string name="personal_info_str_14">请输入昵称</string>
+    <string name="personal_info_str_15">修改姓名</string>
+    <string name="personal_info_str_16">请输入姓名</string>
+    <string name="personal_info_str_17">修改电话号码</string>
+    <string name="personal_info_str_18">请输入电话号码</string>
+    <string name="personal_info_str_19">修改手机号码</string>
+    <string name="personal_info_str_20">请输入手机号码</string>
+    <string name="personal_info_str_21">修改邮箱</string>
+    <string name="personal_info_str_22">请输入邮箱</string>
+
+
+    <!--PhotoPickerActivity-->
+    <string name="photo_picker_activity_str_1">图片选择</string>
+    <string name="photo_picker_activity_str_2">完成</string>
+    <string name="photo_picker_activity_str_3">所有图片</string>
+    <string name="photo_picker_activity_str_4">%1$d张</string>
+    <string name="photo_picker_activity_str_5">您最多只能选择%1$d张照片</string>
+    <string name="photo_picker_activity_str_6">(%1$d/%2$d)完成</string>
+    <string name="photo_picker_activity_str_7">预览</string>
+    <string name="photo_picker_activity_str_8">预览(%1$d)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">消息界面</string>
+
+
+    <string name="access_info">门禁资料</string>
+
+    <!--NotificationSettingActivity-->
+    <string name="notification_setting_str_1">声音</string>
+    <string name="notification_setting_str_2">震动</string>
+
+    <!--PwdModifyActivity-->
+    <string name="pwd_modify_str_1">原&#8194;密&#8194;码</string>
+    <string name="pwd_modify_str_2">请输入原密码</string>
+    <string name="pwd_modify_str_3">新&#8194;密&#8194;码</string>
+    <string name="pwd_modify_str_4">请输入新密码</string>
+    <string name="pwd_modify_str_5">确认密码</string>
+    <string name="pwd_modify_str_6">请再次输入新密码</string>
+    <string name="pwd_modify_str_7">下一步</string>
+    <string name="pwd_modify_str_8">提交</string>
+
+    <!--LanguageActivity-->
+    <string name="language_str_1">默认</string>
+    <string name="language_str_2">中文(简体)</string>
+    <string name="language_str_3">中文(繁體)</string>
+    <string name="language_str_4">English(United States)</string>
+
+    <!--AboutUsActivity-->
+    <string name="about_us_str_1">更新说明</string>
+    <string name="about_us_str_2">检查版本</string>
+    <string name="about_us_str_3">深圳市纽贝尔电子有限公司 版权所有</string>
+    <string name="about_us_str_4">Copyright © Newabel</string>
+    <string name="about_us_str_5">All Rights Reserved</string>
+    <string name="about_us_str_6">可升级至版本%1$s</string>
+    <string name="about_us_str_7">发现新版本%1$s</string>
+    <string name="about_us_str_8">立即升级</string>
+
+    <!--PersonalInfoModifyActivity-->
+    <string name="personal_info_modify_str_1">提交</string>
+    <string name="personal_info_modify_str_2">获取验证码</string>
+    <string name="personal_info_modify_str_3">请输入验证码</string>
+    <string name="personal_info_modify_str_4">您输入的电话号码不合法</string>
+    <string name="personal_info_modify_str_5">您输入的手机号码不合法</string>
+    <string name="personal_info_modify_str_6">您输入的邮箱地址不合法</string>
+    <string name="personal_info_modify_str_7">您输入验证码不正确</string>
+
+
+    <!--VerifyCodeButton-->
+    <string name="verify_code_str_1">%1$d秒后重发</string>
+    <string name="verify_code_str_2">点击重发</string>
+
+    <!--SexDialog-->
+    <string name="male">男</string>
+    <string name="female">女</string>
+
+    <!--QrCardActivity-->
+    <string name="qr_card_str_1">我的二维码</string>
+    <string name="qr_card_str_2">分享二维码</string>
+    <string name="qr_card_str_3">保存二维码</string>
+    <string name="qr_card_str_4">扫一扫</string>
+    <string name="qr_card_str_5">二维码已保存至相册</string>
+
+    <!--QrScanActivity-->
+    <string name="qr_scan_str_1">将二维码/条码放入框内，即可自动扫描</string>
+
+    <!--LoginActivity-->
+    <string name="login_str_1">登陆</string>
+    <string name="login_str_2">请输入账号或者手机号</string>
+    <string name="login_str_3">密码</string>
+    <string name="login_str_4">请输入密码</string>
+    <string name="login_str_5">登陆</string>
+    <string name="login_str_6">忘记密码？</string>
+    <string name="login_str_7">注册用户</string>
+    <string name="login_str_8">账号或者密码错误</string>
+    <string name="login_str_9">登陆失败</string>
+    <string name="login_str_10">登陆成功</string>
+    <string name="login_str_11">登陆用户不存在</string>
+    <string name="login_str_12">登陆用户已停用</string>
+    <string name="login_str_13">登陆用户已过期</string>
+    <string name="login_str_14">登陆用户已被锁定</string>
+    <string name="login_str_15">用户无权限</string>
+
+    <!--IpSettingActivity-->
+    <string name="ip_setting_str_1">IP地址</string>
+    <string name="ip_setting_str_2">192.168.0.123</string>
+    <string name="ip_setting_str_3">端口号</string>
+    <string name="ip_setting_str_4">23</string>
+    <string name="ip_setting_str_5">保存</string>
+    <string name="ip_setting_str_6">请输入IP地址</string>
+    <string name="ip_setting_str_7">请输入端口号</string>
+    <string name="ip_setting_str_8">请输入合法的IP地址</string>
+    <string name="ip_setting_str_9">设置已保存</string>
+
+    <!--ForgetPwdActivity-->
+    <string name="forget_pwd_str_1">手机号</string>
+    <string name="forget_pwd_str_2">请输入手机号</string>
+    <string name="forget_pwd_str_3">验证码</string>
+    <string name="forget_pwd_str_4">请输入手机验证码</string>
+    <string name="forget_pwd_str_5">获取验证码</string>
+    <string name="forget_pwd_str_6">新&#8194;密&#8194;码</string>
+    <string name="forget_pwd_str_7">请输入新密码</string>
+    <string name="forget_pwd_str_8">确认密码</string>
+    <string name="forget_pwd_str_9">请再次输入新密码</string>
+    <string name="forget_pwd_str_10">下一步</string>
+    <string name="forget_pwd_str_11">提交</string>
+    <string name="forget_pwd_str_12">新密码设置成功</string>
+    <string name="forget_pwd_str_13">新密码设置失败</string>
+
+    <!--RegisterActivity-->
+    <string name="register_str_1">手机号</string>
+    <string name="register_str_2">请输入手机号</string>
+    <string name="register_str_3">验证码</string>
+    <string name="register_str_4">请输入手机验证码</string>
+    <string name="register_str_5">获取验证码</string>
+    <string name="register_str_6">账&#12288;&#12288;号</string>
+    <string name="register_str_7">请输入账号</string>
+    <string name="register_str_8">密&#12288;&#12288;码</string>
+    <string name="register_str_9">请输入6-20位密码</string>
+    <string name="register_str_10">确认密码</string>
+    <string name="register_str_11">请再次输入密码</string>
+    <string name="register_str_12">下一步</string>
+    <string name="register_str_13">提交</string>
+    <string name="register_str_14">用户注册成功</string>
+    <string name="register_str_15">用户注册失败</string>
+    <string name="register_str_16">输入的手机号码不合法</string>
+    <string name="register_str_17">两次输入的密码不一致</string>
+    <string name="register_str_18">注册用户已存在</string>
+
+    <!--SearchRecordActivity-->
+    <string name="search_record_str_1">请输入关键词</string>
+    <string name="search_record_str_2">确定</string>
+    <string name="search_record_str_3">取消</string>
+
+    <!--功能区-->
+    <string name="module_title_entrance_data">门禁资料</string>
+    <string name="module_title_entrance_event">门禁事件</string>
+    <string name="module_title_entrance_control">门禁控制</string>
+    <string name="module_title_zone_manage">区域管理</string>
+    <string name="module_title_device_data">设备资料</string>
+    <string name="module_title_department_manage">机构管理</string>
+    <string name="module_title_employee_manage">人员管理</string>
+
+    <string name="module_hint_entrance_data">请输入区域、门名称</string>
+    <string name="module_hint_entrance_event">请输入区域、门名称</string>
+    <string name="module_hint_entrance_control">请输入区域、门名称</string>
+    <string name="module_hint_zone_manage">请输入区域名称</string>
+    <string name="module_hint_device_data">请输入区域、设备名称</string>
+    <string name="module_hint_department_manage">请输入机构名称</string>
+    <string name="module_hint_employee_manage">请输入机构、人员名称</string>
+
+    <string name="module_str_1">获取数据失败</string>
+    <string name="module_str_2">区域不存在</string>
+    <string name="module_str_3">门禁</string>
+    <string name="module_str_4">区域</string>
+    <string name="module_str_5">查看区域</string>
+    <string name="module_str_6">删除区域</string>
+    <string name="module_str_7">根节点</string>
+    <string name="module_str_8">确认删除%1$s吗？</string>
+    <string name="module_str_9">机构</string>
+    <string name="module_str_10">人事</string>
+
+    <!--ZoneDetailActivity 区域资料-->
+    <string name="zone_detail_str_1">区域编号</string>
+    <string name="zone_detail_str_2">请输入区域编号</string>
+    <string name="zone_detail_str_3">区域名称</string>
+    <string name="zone_detail_str_4">请输入区域名称</string>
+    <string name="zone_detail_str_5">从属于</string>
+    <string name="zone_detail_str_6">区域类型</string>
+    <string name="zone_detail_str_7">请选择区域类型</string>
+    <string name="zone_detail_str_8">备注</string>
+    <string name="zone_detail_str_9">请输入备注</string>
+
+    <string name="zone_detail_str_10">普通区域</string>
+    <string name="zone_detail_str_11">通道区域</string>
+    <string name="zone_detail_str_12">房间</string>
+
+    <string name="zone_detail_str_13">修改区域信息成功</string>
+    <string name="zone_detail_str_14">修改区域信息失败</string>
+    <string name="zone_detail_str_15">区域不存在</string>
+    <string name="zone_detail_str_16">区域已存在</string>
+    <string name="zone_detail_str_17">添加区域信息成功</string>
+    <string name="zone_detail_str_18">添加区域信息失败</string>
+    <string name="zone_detail_str_19">删除区域成功</string>
+    <string name="zone_detail_str_20">删除区域失败</string>
+    <string name="zone_detail_str_22">确认删除该条记录吗？</string>
+    <string name="zone_detail_str_23">新增区域</string>
+
+    <!--EntranceDataActivity门禁资料-->
+    <string name="entrance_data_str_1">门禁编号</string>
+    <string name="entrance_data_str_2">请输入门禁编号</string>
+    <string name="entrance_data_str_3">门禁名称</string>
+    <string name="entrance_data_str_4">请输入门禁名称</string>
+    <string name="entrance_data_str_5">门禁类型</string>
+    <string name="entrance_data_str_6">请选择门禁类型</string>
+    <string name="entrance_data_str_7">控制设备</string>
+    <string name="entrance_data_str_8">请选择控制设备</string>
+    <string name="entrance_data_str_9">子设备ID</string>
+    <string name="entrance_data_str_10">是否停用</string>
+    <string name="entrance_data_str_11">备&#12288;&#12288;注</string>
+    <string name="entrance_data_str_12">请输入备注</string>
+    <string name="entrance_data_str_13">提交</string>
+    <string name="entrance_data_str_14">单一设备控制一个门</string>
+    <string name="entrance_data_str_15">多个设备控制一个门</string>
+    <string name="entrance_data_str_16">多个门组合成一个门</string>
+    <string name="entrance_data_str_17">设备查询失败</string>
+    <string name="entrance_data_str_18">确认删除该条记录吗？</string>
+    <string name="entrance_data_str_19">设备不存在</string>
+    <string name="entrance_data_str_29">请选择控制设备</string>
+
+
+    <string name="module_str_watch_dept">查看机构</string>
+    <string name="module_str_delete_dept">删除机构</string>
+
+    <string name="text_add_dept">新增机构</string>
+
+    <string name="warn_dept_num_isnull">机构编号不能为空</string>
+    <string name="warn_dept_name_isnull">机构名称不能为空</string>
+    <string name="warn_choose_dept_type">请选择机构类型</string>
+
+    <string name="warn_get_dept_type_fail">机构类型获取失败</string>
+
+    <string name="add_success">新增成功</string>
+    <string name="add_fail">新增失败</string>
+
+    <string name="modify_success">修改成功</string>
+    <string name="modify_fail">修改失败</string>
+
+    <string name="delete_success">删除成功</string>
+    <string name="delete_fail">删除失败</string>
+
+    <string name="text_add_emp">新增人员</string>
+
+    <string name="warn_emp_num_isnull">人员编号不能为空</string>
+    <string name="warn_emp_name_isnull">人员名称不能为空</string>
+    <string name="warn_choose_emp_type">请选择人员类型</string>
+    <string name="warn_choose_emp_sex">请选择人员性别</string>
+    <string name="warn_choose_emp_certif">请选择证件类型</string>
+
+    <string name="text_dept_info">机构信息</string>
+    <string name="text_emp_info">人员信息</string>
+
+    <string name="warn_device_num_isnull">设备编号不能为空</string>
+    <string name="warn_device_name_isnull">设备名称不能为空</string>
+    <string name="warn_choose_device_type">设备类型不能为空</string>
+    <string name="warn_choose_device_port_type">请选择端口类型</string>
+
+    <string name="text_add_door">新增门禁</string>
+    <string name="text_door_name">门禁名称</string>
+
+    <string name="warn_door_num_isnull">门禁编号不能为空</string>
+    <string name="warn_door_name_isnull">门禁名称不能为空</string>
+    <string name="warn_choose_door_type">门禁类型不能为空</string>
+
+    <!--DeviceDataActivity-->
+    <string name="device_data_str_1">设备编号</string>
+    <string name="device_data_str_2">设备名称</string>
+    <string name="device_data_str_3">设备类型</string>
+    <string name="device_data_str_4">所在区域</string>
+    <string name="device_data_str_5">通讯方式</string>
+    <string name="device_data_str_6">通讯超时</string>
+    <string name="device_data_str_7">IP地址</string>
+    <string name="device_data_str_8">端口号</string>
+    <string name="device_data_str_9">是否停用</string>
+    <string name="device_data_str_10">备注</string>
+    <string name="device_data_str_11">波特率</string>
+    <string name="device_data_str_12">串口号</string>
+    <string name="device_data_str_13">网络ID</string>
+    <string name="device_data_str_14">串口</string>
+    <string name="device_data_str_15">UDP</string>
+    <string name="device_data_str_16">TCP Server</string>
+    <string name="device_data_str_17">TCP Client</string>
+    <string name="device_data_str_18">确认删除该条记录吗</string>
+    <string name="device_data_str_19">请输入网络ID</string>
+    <string name="device_data_str_20">请选择通讯方式</string>
+    <string name="device_data_str_21">请选择波特率</string>
+    <string name="device_data_str_22">请选择串口号</string>
+    <string name="device_data_str_23">请输入通讯超时时间</string>
+    <string name="device_data_str_24">请输入IP地址</string>
+    <string name="device_data_str_25">请输入端口号</string>
+    <string name="device_data_str_26">请输入设备编号</string>
+    <string name="device_data_str_27">请输入设备名称</string>
+    <string name="device_data_str_28">请输入设备类型</string>
+    <string name="device_data_str_29">请输入备注</string>
+    <string name="device_data_str_30">请输入正确的IP地址</string>
+
+    <!--RegisterRecordFragment-->
+    <string name="register_record_str_1">待处理</string>
+    <string name="register_record_str_2">审核中</string>
+    <string name="register_record_str_3">已完成</string>
+    <string name="register_record_str_4">申请详情</string>
+    <string name="register_record_str_5">申请进度</string>
+
+    <!--RegisterDataActivity-->
+    <string name="register_data_str_1">完成以下步骤即可申请成为我司服务人员</string>
+    <string name="register_data_str_2">基本信息</string>
+    <string name="register_data_str_3">资质信息</string>
+    <string name="register_data_str_4">填写完成</string>
+    <string name="register_data_str_5">立即填写</string>
+    <string name="register_data_str_6">审核中</string>
+    <string name="register_data_str_7">审核通过</string>
+    <string name="register_data_str_8">暂不合作</string>
+
+    <!--RegisterProgressActivity-->
+    <string name="register_progress_str_1">流程状态:</string>
+    <string name="register_progress_str_2">申请人:</string>
+    <string name="register_progress_str_3">单据编号:</string>
+
+    <!--RegisterBasicDataActivity-->
+    <string name="register_basic_str_1">个人头像</string>
+    <string name="register_basic_str_2">示例图</string>
+    <string name="register_basic_str_3">1.上传本人近期半身正面照片。</string>
+    <string name="register_basic_str_4">2.五官清洗，需露出眼、耳、口、鼻以及额头。</string>
+    <string name="register_basic_str_6">手持身份证照片</string>
+    <string name="register_basic_str_7">1.正面清洗，需拍出人物五官和身份证文字信息。</string>
+    <string name="register_basic_str_8">2.不可自拍，不可只拍身份证。</string>
+    <string name="register_basic_str_9">姓&#12288;&#12288;名</string>
+    <string name="register_basic_str_10">请输入姓名</string>
+    <string name="register_basic_str_11">身份证号</string>
+    <string name="register_basic_str_12">请输入身份证号</string>
+    <string name="register_basic_str_13">性&#12288;&#12288;别</string>
+    <string name="register_basic_str_14">请选择性别</string>
+    <string name="register_basic_str_15">民&#12288;&#12288;族</string>
+    <string name="register_basic_str_16">请选择民族</string>
+    <string name="register_basic_str_17">出生日期</string>
+    <string name="register_basic_str_18">请选择出生日期</string>
+    <string name="register_basic_str_19">地&#12288;&#12288;址</string>
+    <string name="register_basic_str_20">请输入地址</string>
+    <string name="register_basic_str_21">其他信息</string>
+    <string name="register_basic_str_22">现&#8194;住&#8194;址</string>
+    <string name="register_basic_str_23">请输入现在居住地址</string>
+    <string name="register_basic_str_24">健康状况</string>
+    <string name="register_basic_str_25">请输入个人健康状况</string>
+    <string name="register_basic_str_26">精神病史</string>
+    <string name="register_basic_str_27">请输入精神病史</string>
+    <string name="register_basic_str_28">传染病史</string>
+    <string name="register_basic_str_29">请输入传染病史</string>
+    <string name="register_basic_str_30">紧急联系人</string>
+    <string name="register_basic_str_31">请输入紧急联系人</string>
+    <string name="register_basic_str_32">联系电话</string>
+    <string name="register_basic_str_33">请输入紧急联系人电话</string>
+
+    <!--RegisterQualificationActivity-->
+    <string name="register_qualification_str_1">毕业证书</string>
+    <string name="register_qualification_str_2">1.请将证书放置平整后再拍。</string>
+    <string name="register_qualification_str_3">2.照片文字、印章清晰，边框完整。</string>
+    <string name="register_qualification_str_4">证书编号</string>
+    <string name="register_qualification_str_5">请输入证书编号</string>
+    <string name="register_qualification_str_6">毕业院校</string>
+    <string name="register_qualification_str_7">请输入毕业院校</string>
+    <string name="register_qualification_str_8">毕业时间</string>
+    <string name="register_qualification_str_9">请选择毕业时间</string>
+    <string name="register_qualification_str_10">专&#12288;&#12288;业</string>
+    <string name="register_qualification_str_11">请输入所学专业</string>
+    <string name="register_qualification_str_12">学&#12288;&#12288;历</string>
+    <string name="register_qualification_str_13">请选择学历</string>
+    <string name="register_qualification_str_14">公司信息</string>
+    <string name="register_qualification_str_15">公司名称</string>
+    <string name="register_qualification_str_16">请选择公司</string>
+    <string name="register_qualification_str_17">职&#12288;&#12288;位</string>
+    <string name="register_qualification_str_18">请选择职位</string>
+
+    <!--RegisterReviewActivity-->
+    <string name="register_review_str_1">待处理</string>
+    <string name="register_review_str_2">已同意</string>
+    <string name="register_review_str_3">被拒绝</string>
+    <!--RegisterCommentActivity-->
+    <string name="register_comment_str_1">审批意见</string>
+    <string name="register_comment_str_2">请选择审批意见</string>
+    <string name="register_comment_str_3">备&#12288;&#12288;注</string>
+    <string name="register_comment_str_4">请输入备注</string>
+
+    <!--WorkOrderActivity我的工单-->
+    <string name="title_activity_work_wrder">我的工单</string>
+    <string name="work_order_state_start">我发起</string>
+    <string name="work_order_state_unconfirm">待确认</string>
+    <string name="work_order_state_reject">已拒绝</string>
+    <string name="work_order_state_done">已完成</string>
+
+    <string name="work_order_detail">工单详情</string>
+    <string name="work_order_process">工单流程</string>
+
+    <string name="work_order_state">工单状态:</string>
+    <string name="work_order_name">工单名称:</string>
+    <string name="work_order_code">工单编号:</string>
+
+    <!--OrderRepairActivity-->
+    <string name="order_repair_str_1">单据名称</string>
+    <string name="order_repair_str_2">维修地点</string>
+    <string name="order_repair_str_3">故障原因</string>
+    <string name="order_repair_str_4">故障设备</string>
+    <string name="order_repair_str_5">出厂日期</string>
+    <string name="order_repair_str_6">委托人</string>
+    <string name="order_repair_str_7">联系方式</string>
+    <string name="order_repair_str_8">交期时间</string>
+    <string name="order_repair_str_9">回复</string>
+    <string name="order_repair_str_10">维修人员</string>
+
+    <!--EmployeeInfoActivity-->
+    <string name="employee_info_1">性别</string>
+    <string name="employee_info_2">年龄</string>
+    <string name="employee_info_3">电话</string>
+    <string name="employee_info_4">学历</string>
+    <string name="employee_info_5">任务一次通过率</string>
+    <string name="employee_info_6">评价得分</string>
+    <string name="employee_info_7">任务量</string>
+
+    <!--OrderReplyActivity-->
+    <string name="order_reply_str_1">是否接受</string>
+    <string name="order_reply_str_2">完成</string>
+    <string name="order_reply_str_3">请选择</string>
+    <string name="order_reply_str_4">备注</string>
+    <string name="order_reply_str_5">请输入备注</string>
+    <string name="order_reply_str_6">接受</string>
+    <string name="order_reply_str_7">拒绝</string>
+</resources>

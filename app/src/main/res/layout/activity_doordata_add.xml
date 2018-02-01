@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.DoorDataAddActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/divider_top_height"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_1"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_code"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/entrance_data_str_2"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_door_name"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_name"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/entrance_data_str_4"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_area_belong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_area_belong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="所属区域"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_area_belong_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_area_belong"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_door_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_ctr_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_5"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_ctr_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_ctr_type_name"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:hint="@string/entrance_data_str_6"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ctr_device"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_ctr_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_7"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_ctr_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_ctr_device_name"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/entrance_data_str_8"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_child_device"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_child_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_9"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_child_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_child_device_name"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_state"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_10"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_state"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selector_entrance_data_checked" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/entrance_data_str_11"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_remark"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/entrance_data_str_12"
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/margin_page_right"
+            android:layout_marginRight="@dimen/margin_page_right"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/entrance_data_str_13"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>

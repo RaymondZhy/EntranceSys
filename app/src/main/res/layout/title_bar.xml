@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:background="@drawable/selector_base_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_arrow_left" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/top_bar_textSize" />
+
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/selector_base_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:src="@drawable/icon_access_info_add"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_35"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:background="@drawable/selector_base_bg"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone" />
+</RelativeLayout>

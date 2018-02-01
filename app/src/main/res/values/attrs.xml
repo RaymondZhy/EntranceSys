@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatioImageView">
+        <attr name="vertical_weight" format="integer" />
+        <attr name="horizontal_weight" format="integer" />
+        <attr name="base" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PhotoCheckBox">
+        <attr name="cb_stroke_size" format="dimension" />
+        <attr name="cb_stroke_color" format="color|reference" /> <!--边框线的颜色-->
+        <attr name="cb_radius" format="dimension" /><!--倒角或者圆的半径-->
+        <attr name="cb_solid_color" format="color|reference" /><!--内部填充的颜色-->
+        <attr name="cb_inner_shape" format="enum">
+            <enum name="hook" value="0" /><!--打勾-->
+            <enum name="dot" value="1" /><!--圆点-->
+        </attr>
+        <attr name="cb_inner_shape_color" format="color|reference" /><!--选中时的内部形状的颜色-->
+        <attr name="cb_hook_stroke_size" format="dimension" /> <!--勾的粗细-->
+        <attr name="cb_dot_radius" format="dimension" /> <!--圆点的大小-->
+    </declare-styleable>
+
+    <declare-styleable name="NavBarView">
+        <attr name="nbv_bg_color" format="color" />
+        <attr name="nbv_arrow_color" format="color" />
+        <attr name="nbv_arrow_width" format="dimension" />
+        <attr name="nbv_text_color" format="color" />
+        <attr name="nbv_text_size" format="dimension" />
+        <attr name="nbv_text" format="string" />
+        <attr name="nbv_text_selected_color" format="color" />
+        <attr name="nbv_text_padding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MapView">
+        <attr name="mv_src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MapMark">
+        <attr name="mm_src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="sv_inner_r" format="dimension" />
+        <attr name="sv_outer_r" format="dimension" />
+        <attr name="sv_outer_Line_w" format="dimension" />
+        <attr name="sv_bg_color" format="color" />
+        <attr name="sv_rect_top_height" format="dimension" />
+        <attr name="sv_rect_bottom_height" format="dimension" />
+        <attr name="sv_rect_width" format="dimension" />
+        <attr name="sv_selected_color" format="color" />
+        <attr name="sv_is_rect_top_visible" format="boolean" />
+        <attr name="sv_is_rect_bottom_visible" format="boolean" />
+        <attr name="sv_margin_text_left" format="dimension" />
+        <attr name="sv_text_color" format="color" />
+        <attr name="sv_text_size" format="dimension" />
+        <attr name="sv_text" format="string" />
+        <attr name="sv_date" format="string" />
+        <attr name="sv_divider_width" format="dimension" />
+        <attr name="sv_divider_bg_color" format="color" />
+    </declare-styleable>
+</resources>

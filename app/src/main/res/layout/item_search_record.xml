@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:layout_marginTop="@dimen/dp_1"
+    android:background="@drawable/selector_click_style"
+    android:paddingLeft="@dimen/margin_page_left"
+    android:paddingRight="@dimen/margin_page_right">
+
+    <TextView
+        android:id="@+id/tv_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toLeftOf="@+id/iv_delete"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="一营营长"
+        android:textColor="@color/text_content"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:id="@+id/ll_delete"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_clear"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

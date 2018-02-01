@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.OrganizaManageActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_organiza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_app_bg"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_organiza_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构名称"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_organiza_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="123456"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构编号"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_organiza_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="123456"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="上级机构编号"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv__higher_level_organiza_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="123456"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构类型"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_organiza_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="分公司"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

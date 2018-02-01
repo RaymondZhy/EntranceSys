@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.newabel.entrancesys.ui.activity.TestActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_margin="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="搜索记录" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.newabel.entrancesys.ui.widget.NavBarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:nbv_text="你好" />
+
+        <com.newabel.entrancesys.ui.widget.NavBarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:nbv_text="你好" />
+
+        <com.newabel.entrancesys.ui.widget.NavBarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:nbv_text="你好" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+    <!--
+    <com.newabel.entranceguardsys.ui.widget.ScaleImageView
+        android:id="@+id/iv_scale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="matrix"
+        android:visibility="gone"
+        android:src="@mipmap/nature"
+        />-->
+    <ImageView
+        android:id="@+id/iv_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@mipmap/nature"
+        android:visibility="gone" />
+
+    <!--
+    <com.newabel.entranceguardsys.ui.widget.MyView
+        android:id="@+id/mView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:src="@mipmap/nature"
+        android:visibility="gone"
+        >
+
+    </com.newabel.entranceguardsys.ui.widget.MyView>-->
+
+    <com.newabel.entrancesys.ui.widget.MapView
+        android:id="@+id/mv_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:mv_src="@mipmap/map" />
+
+    <com.newabel.entrancesys.ui.widget.MapMark
+        android:id="@+id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:mm_src="@mipmap/ic_map_mark" />
+
+    <com.newabel.entrancesys.ui.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/add_success" />
+    </FrameLayout>
+
+    <com.newabel.entrancesys.ui.widget.StepView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:visibility="gone"
+        app:sv_rect_bottom_height="@dimen/dp_100"
+        app:sv_rect_top_height="@dimen/dp_100"
+        app:sv_text="天下大同天下大同天下大同天下大同天下大同天下大"
+        app:sv_date="2017-12-25"
+        />
+
+    <com.newabel.entrancesys.ui.widget.StepView
+        android:id="@+id/sv_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:visibility="visible"
+        app:sv_bg_color="@color/text_content"
+        app:sv_date=""
+        app:sv_inner_r="@dimen/dp_7"
+        app:sv_is_rect_bottom_visible="true"
+        app:sv_is_rect_top_visible="true"
+        app:sv_margin_text_left="@dimen/dp_10"
+        app:sv_outer_Line_w="@dimen/dp_2"
+        app:sv_outer_r="@dimen/dp_10"
+        app:sv_rect_bottom_height="@dimen/dp_100"
+        app:sv_rect_top_height="@dimen/dp_100"
+        app:sv_rect_width="@dimen/dp_2"
+        app:sv_selected_color="@color/green"
+        app:sv_text=""
+        app:sv_text_color="@color/text_content"
+        app:sv_text_size="@dimen/sp_14" />
+    <!--基本思想：假设数据是按升序排序的，对于给定值xdfs，从序列的中间位置开始比较，如果当前位置值等于x，则查找成功；若 x 小于当前位置值，则在数列的前半段中查找；若 x 大于当前位置值则在数列的后半段中继续查找，直到找到为止-->
+</LinearLayout>

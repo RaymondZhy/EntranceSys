@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_bg"
+    tools:context="com.newabel.entrancesys.ui.activity.AboutUsActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_30">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:text="手机门禁 1.10"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_update_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/divider_common_height"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <ImageView
+                android:id="@+id/iv_update_content"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_about_us_update_desc" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/iv_update_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/about_us_str_1"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_arrow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_arrow_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_check_version"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_click_style"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <ImageView
+                android:id="@+id/iv_check_version"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_about_us_check_version" />
+
+
+            <TextView
+                android:id="@+id/tv_check_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/iv_check_version"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/about_us_str_2"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_new_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv_check_version"
+                android:layout_toLeftOf="@+id/iv_arrow2"
+                android:gravity="right"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_arrow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_arrow_right" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_str_3"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_str_4"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_str_5"
+            android:textColor="@color/text_content"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+</RelativeLayout>

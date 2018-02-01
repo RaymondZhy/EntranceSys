@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/divider_top_height"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构编号"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="00003"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构名称"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text="一营"
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_belong_dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="从属于"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_belong_dept_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dept_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_page_left"
+            android:paddingRight="@dimen/margin_page_right">
+
+            <TextView
+                android:id="@+id/tv_depart_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="机构类型"
+                android:textColor="@color/text_tittle"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_depart_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="right"
+                android:hint=""
+                android:lines="1"
+                android:maxLength="30"
+                android:text=""
+                android:textColor="@color/text_content"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/margin_page_right"
+            android:layout_marginRight="@dimen/margin_page_right"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
