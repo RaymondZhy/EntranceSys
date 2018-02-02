@@ -8,7 +8,7 @@ import android.content.Context;
  * DATE: 2017/12/8 0008.
  */
 
-public interface LoginView extends MView{
+public interface LoginView {
 
     void startActivity();
     Context getContext();

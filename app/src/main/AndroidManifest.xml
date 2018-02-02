@@ -65,11 +65,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newabel.entrancesys.ui.activity.AccessInfoActivity"
-            android:label="@string/access_info"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
             android:name="com.newabel.entrancesys.ui.activity.PwdModifyActivity"
             android:label="@string/title_activity_pwd_modify"
             android:launchMode="singleTask"
@@ -82,16 +77,6 @@
         <activity
             android:name="com.newabel.entrancesys.ui.activity.AboutUsActivity"
             android:label="@string/title_activity_about_us"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.UpdateDescActivity"
-            android:label="@string/title_activity_update_desc"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.UpdateContentActivity"
-            android:label="@string/title_activity_update_content"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
@@ -131,81 +116,11 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.newabel.entrancesys.ui.activity.TestActivity" />
         <activity
-            android:name="com.newabel.entrancesys.ui.activity.MenManageActivity"
-            android:label="@string/title_activity_men_manage"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.OrganizaManageActivity" />
-        <activity
             android:name="com.newabel.entrancesys.ui.activity.SearchRecordActivity"
             android:label="@string/title_activity_search_record"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.ModuleActivity"
-            android:label="@string/title_activity_module"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.EntranceEventActivity"
-            android:label="@string/title_activity_entrance_event"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.EntranceDataActivity"
-            android:label="@string/title_activity_entrance_data"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.EmployeeInfoDetailActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.DepartInfoDetailActivity" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.AddNewDeviceActivity"
-            android:label="@string/title_activity_add_new_device"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.AddNewDepartctivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.AddNewEmployeeActivity" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.DeviceDataActivity"
-            android:label="@string/title_activity_device_data"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.EntranceControlActivity"
-            android:label="@string/title_activity_entrance_control"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.ZoneDetailActivity"
-            android:label="@string/title_activity_zone_detail"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.DoorDataAddActivity"
-            android:label="@string/text_add_door"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.RegisterRecordActivity"
-            android:label="@string/title_activity_register_record"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.newabel.entrancesys.ui.activity.RegisterDataActivity"
-            android:label="@string/title_activity_register_data"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.RegisterProgressActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.RegisterBasicDataActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.RegisterQualificationActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.RegisterReviewActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.RegisterCommentActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.WorkOrderActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.WorkOrderProcessActivity"></activity>
-        <activity android:name="com.newabel.entrancesys.ui.activity.OrderRepairActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.EmployeeInfoActivity" />
-        <activity android:name="com.newabel.entrancesys.ui.activity.OrderReplyActivity"></activity>
     </application>
 
 </manifest>

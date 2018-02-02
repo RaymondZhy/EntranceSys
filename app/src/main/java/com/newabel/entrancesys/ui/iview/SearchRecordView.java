@@ -6,5 +6,5 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/12/13 0013.
  */
 
-public interface SearchRecordView extends MView {
+public interface SearchRecordView {
 }

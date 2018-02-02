@@ -113,8 +113,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     public void startActivity() {
-//        Intent intent = new Intent(UIUtils.getContext(), MainActivity.class);
-        Intent intent = new Intent(UIUtils.getContext(), RegisterRecordActivity.class);
+        Intent intent = new Intent(UIUtils.getContext(), MainActivity.class);
         startActivity(intent);
         finish();
     }

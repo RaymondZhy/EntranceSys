@@ -129,10 +129,7 @@ public class TestActivity extends BaseActivity<TestPresenter> implements SwipeRe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_search:
-//                startActivity(new Intent(this,SearchRecordActivity.class));
-                Intent intent = new Intent(this, OrderRepairActivity.class);
-                startActivity(intent);
-
+                startActivity(new Intent(this,SearchRecordActivity.class));
                 break;
             case R.id.iv_animation:
                 ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(iv_animation, "scaleX", 1.0f, 0.9f);

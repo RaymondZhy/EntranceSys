@@ -98,28 +98,26 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
                 btn_verify_code.setButtonStatus(VerifyCodeButton.STATUS_COUNTING);
                 break;
             case R.id.btn_action:
-//                if(ll_verify_code.getVisibility() == View.VISIBLE){
-//                    String phone = et_phone.getText().toString();
-//                    String verifyCode = et_verify_code.getText().toString();
-//                    if(mPresenter.checkInput(phone,verifyCode)) {
-//                        ll_verify_code.setVisibility(View.GONE);
-//                        ll_pwd.setVisibility(View.VISIBLE);
-//                        btn_verify_code.setButtonStatus(VerifyCodeButton.STATUS_COUNT_STOP);
-//                        btn_action.setText(getString(R.string.register_str_13));
-//                    }
-//                }else{
-//                    String username = et_account.getText().toString();
-//                    String phone = et_phone.getText().toString();
-//                    String certifno = "123";
-//                    String pwd = et_pwd.getText().toString();
-//                    String confirmpwd = et_confirm_pwd.getText().toString();
-//                    if(mPresenter.checkInput(username,phone,certifno,pwd,confirmpwd)) {
-//                        mPresenter.register(username, phone, certifno, pwd);
-//                    }
-//                }
+                if(ll_verify_code.getVisibility() == View.VISIBLE){
+                    String phone = et_phone.getText().toString();
+                    String verifyCode = et_verify_code.getText().toString();
+                    if(mPresenter.checkInput(phone,verifyCode)) {
+                        ll_verify_code.setVisibility(View.GONE);
+                        ll_pwd.setVisibility(View.VISIBLE);
+                        btn_verify_code.setButtonStatus(VerifyCodeButton.STATUS_COUNT_STOP);
+                        btn_action.setText(getString(R.string.register_str_13));
+                    }
+                }else{
+                    String username = et_account.getText().toString();
+                    String phone = et_phone.getText().toString();
+                    String certifno = "123";
+                    String pwd = et_pwd.getText().toString();
+                    String confirmpwd = et_confirm_pwd.getText().toString();
+                    if(mPresenter.checkInput(username,phone,certifno,pwd,confirmpwd)) {
+                        mPresenter.register(username, phone, certifno, pwd);
+                    }
+                }
 
-                Intent intent = new Intent(this, RegisterDataActivity.class);
-                startActivity(intent);
                 break;
         }
     }

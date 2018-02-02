@@ -9,7 +9,6 @@ import android.view.View;
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.service.entity.MyInfoEntity;
 import com.newabel.entrancesys.service.presenter.BasePresenter;
-import com.newabel.entrancesys.ui.adapter.MyInfoAdapter;
 import com.newabel.entrancesys.ui.base.BaseFragment;
 import com.newabel.entrancesys.ui.utils.UIUtils;
 import com.newabel.entrancesys.ui.widget.ItemDivider;
@@ -30,10 +29,6 @@ public class MyInformationFragment extends BaseFragment implements SwipeRefreshL
     @BindView(R.id.recyclerview_myinfo)
     RecyclerView recyclerView;
 
-    private MyInfoAdapter myInfoAdapter;
-    private List<MyInfoEntity> myInfos = new ArrayList<MyInfoEntity>();
-
-
     @Override
     protected void loadData() {
 
@@ -53,25 +48,17 @@ public class MyInformationFragment extends BaseFragment implements SwipeRefreshL
 
     @Override
     protected void initData() {
-        for (int i = 0; i < 4; i++) {
-            MyInfoEntity myInfoEntity = new MyInfoEntity("消息" + i);
-            myInfos.add(myInfoEntity);
-        }
+
     }
 
     @Override
     protected void initView(View rootView) {
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.addItemDecoration(new ItemDivider(getActivity(), R.drawable.item_divider));
 
-        myInfoAdapter = new MyInfoAdapter(myInfos);
-        recyclerView.setAdapter(myInfoAdapter);
     }
 
     @Override
     protected void initListener() {
-        srfMyinfo.setColorSchemeColors(ContextCompat.getColor(getContext(),R.color.colorPrimary));
-        srfMyinfo.setOnRefreshListener(this);
+
     }
 
     @Override

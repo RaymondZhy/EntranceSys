@@ -6,5 +6,5 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/12/6 0006.
  */
 
-public interface PwdModifyView extends MView{
+public interface PwdModifyView {
 }

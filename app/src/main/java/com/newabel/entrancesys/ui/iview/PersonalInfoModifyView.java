@@ -6,5 +6,5 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/12/7 0007.
  */
 
-public interface PersonalInfoModifyView extends MView{
+public interface PersonalInfoModifyView {
 }

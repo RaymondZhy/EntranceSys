@@ -6,5 +6,5 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/11/17 0017.
  */
 
-public interface LanguageView extends MView{
+public interface LanguageView {
 }

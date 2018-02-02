@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.service.presenter.UpdateContentPresenter;
 import com.newabel.entrancesys.ui.base.BaseActivity;

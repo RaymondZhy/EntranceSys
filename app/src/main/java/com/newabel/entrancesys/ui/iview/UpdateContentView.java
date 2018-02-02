@@ -6,6 +6,6 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/12/7 0007.
  */
 
-public interface UpdateContentView extends MView{
+public interface UpdateContentView {
 
 }

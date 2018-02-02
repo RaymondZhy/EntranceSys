@@ -6,6 +6,6 @@ package com.newabel.entrancesys.ui.iview;
  * DATE: 2017/12/5 0005.
  */
 
-public interface MeView extends MView {
+public interface MeView {
 
 }
