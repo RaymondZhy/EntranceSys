@@ -1,6 +1,8 @@
 package com.newabel.entrancesys.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 
 import com.chaychan.library.BottomBarItem;
@@ -12,8 +14,10 @@ import com.newabel.entrancesys.ui.adapter.MainTabAdapter;
 import com.newabel.entrancesys.ui.base.BaseActivity;
 import com.newabel.entrancesys.ui.base.BaseFragment;
 import com.newabel.entrancesys.ui.fragment.HomeFragment;
+import com.newabel.entrancesys.ui.fragment.ManageFragment;
 import com.newabel.entrancesys.ui.fragment.MeFragment;
 import com.newabel.entrancesys.ui.fragment.InformationFragment;
+import com.newabel.entrancesys.ui.service.MyService;
 import com.newabel.entrancesys.ui.utils.LogUtil;
 import com.newabel.entrancesys.ui.widget.NoScrollViewPager;
 
@@ -36,7 +40,24 @@ public class MainActivity extends BaseActivity {
 
     private MainTabAdapter mTabAdapter;
 
-    private String TAG = "MainActivity";
+    private String TAG = this.getClass().getSimpleName();
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Intent service = new Intent(this, MyService.class);
+        startService(service);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     @Override
     protected BasePresenter createPresenter() {
@@ -50,9 +71,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        mFragments = new ArrayList<BaseFragment>(3);
+        mFragments = new ArrayList<>();
         mFragments.add(new HomeFragment());
         mFragments.add(new InformationFragment());
+        mFragments.add(new ManageFragment());
         mFragments.add(new MeFragment());
     }
 
@@ -60,7 +82,6 @@ public class MainActivity extends BaseActivity {
     protected void initListener() {
         mTabAdapter = new MainTabAdapter(getSupportFragmentManager(), mFragments);
         mVpContent.setAdapter(mTabAdapter);
-        //设置预加载页面为4，即打开应用，就直接全部加载。
         mVpContent.setOffscreenPageLimit(mFragments.size());
         mBottomBarLayout.setViewPager(mVpContent);
 
@@ -70,37 +91,5 @@ public class MainActivity extends BaseActivity {
 
             }
         });
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMessageEvent(MessageEvent event) {
-        try {
-            if (event.getAction() == MessageEvent.ACTION_SWITCH_LANGUAGE) {
-                recreate();
-            } else if (event.getAction() == MessageEvent.ACTION_SET_MAIN_CURRENT_PAGE) {
-                if (event.getMessage() != null) {
-                    Class c = Class.forName((String) event.getMessage());
-                    for(int i = 0;i<mFragments.size();i++){
-                        if(mFragments.get(i).getClass() == c ){
-                            mVpContent.setCurrentItem(i);
-                        }
-                    }
-                }
-            }
-        }catch (Exception e){
-            LogUtil.e("TAG",e.getMessage());
-        }
-    }
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        registEventBus(this);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        unregistEventBus(this);
     }
 }

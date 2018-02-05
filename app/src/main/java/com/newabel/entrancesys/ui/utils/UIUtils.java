@@ -1,6 +1,7 @@
 package com.newabel.entrancesys.ui.utils;
 
 import android.app.Activity;
+import android.app.KeyguardManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -265,6 +266,7 @@ public class UIUtils {
 
     /**
      * 获取应用程序图标
+     *
      * @param context
      * @return
      */
@@ -282,6 +284,7 @@ public class UIUtils {
 
     /**
      * 获取应用程序图标
+     *
      * @param context
      * @return
      */

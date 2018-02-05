@@ -28,12 +28,10 @@ import butterknife.BindView;
  * Description:
  */
 
-public class HomeFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+public class HomeFragment extends BaseFragment {
 
-    @BindView(R.id.srf)
-    SwipeRefreshLayout mRefreshLayout;
-    @BindView(R.id.home_recyclerview)
-    RecyclerView mRecyclerview;
+    @BindView(R.id.rv_list)
+    RecyclerView rv_list;
 
     @Override
     protected void initView(View rootView) {
@@ -67,25 +65,9 @@ public class HomeFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         return null;
     }
 
-    @Override
-    public void onRefresh() {
-        UIUtils.showToast("刷新首页数据...");
-        UIUtils.postTaskDelay(new Runnable() {
-            @Override
-            public void run() {
-                mRefreshLayout.setRefreshing(false);
-            }
-        }, 2000);
-    }
 
     @Override
     protected void onFragmentVisibleChange(boolean isFragmentVisible) {
-        if (isFragmentVisible) {
-            //不可见-->可见,发一个消息,轮播图开始轮播
-            EventBus.getDefault().post(new MessageEvent(MessageEvent.ACTION_START_BANNER_TURN));
-        } else {
-            //可见-->不可见,发一个消息,轮播图停止轮播
-            EventBus.getDefault().post(new MessageEvent(MessageEvent.ACTION_STOP_BANNER_TURN));
-        }
+
     }
 }

@@ -23,7 +23,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:touchDrawable="@drawable/selector_bottom_tab"
             app:iconNormal="@drawable/tab_home_normal"
             app:iconSelected="@drawable/tab_home_selected"
             app:itemMarginTop="3dp"
@@ -31,13 +30,13 @@
             app:itemTextSize="10dp"
             app:openTouchBg="true"
             app:textColorNormal="@color/common_grey"
-            app:textColorSelected="@color/status_color_blue" />
+            app:textColorSelected="@color/status_color_blue"
+            app:touchDrawable="@drawable/selector_bottom_tab" />
 
         <com.chaychan.library.BottomBarItem
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:touchDrawable="@drawable/selector_bottom_tab"
             app:iconNormal="@drawable/tab_info_normal"
             app:iconSelected="@drawable/tab_info_selected"
             app:itemMarginTop="3dp"
@@ -45,13 +44,27 @@
             app:itemTextSize="10dp"
             app:openTouchBg="true"
             app:textColorNormal="@color/common_grey"
-            app:textColorSelected="@color/status_color_blue" />
+            app:textColorSelected="@color/status_color_blue"
+            app:touchDrawable="@drawable/selector_bottom_tab" />
 
         <com.chaychan.library.BottomBarItem
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:touchDrawable="@drawable/selector_bottom_tab"
+            app:iconNormal="@drawable/tab_manage_normal"
+            app:iconSelected="@drawable/tab_manage_selected"
+            app:itemMarginTop="3dp"
+            app:itemText="@string/tab_manage"
+            app:itemTextSize="10dp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/common_grey"
+            app:textColorSelected="@color/status_color_blue"
+            app:touchDrawable="@drawable/selector_bottom_tab" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             app:iconNormal="@drawable/tab_me_normal"
             app:iconSelected="@drawable/tab_me_selected"
             app:itemMarginTop="3dp"
@@ -59,7 +72,8 @@
             app:itemTextSize="10dp"
             app:openTouchBg="true"
             app:textColorNormal="@color/common_grey"
-            app:textColorSelected="@color/status_color_blue" />
+            app:textColorSelected="@color/status_color_blue"
+            app:touchDrawable="@drawable/selector_bottom_tab" />
 
 
     </com.chaychan.library.BottomBarLayout>

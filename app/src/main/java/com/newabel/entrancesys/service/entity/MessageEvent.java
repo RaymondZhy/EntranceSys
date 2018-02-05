@@ -27,11 +27,15 @@ public class MessageEvent {
 
     /**
      * 用于activity刷新界面数据
-     * */
+     */
     public static final int ACTION_ACTIVITY_UPDATE = 5;
 
     private int action;
     private Object message;
+
+    public MessageEvent() {
+
+    }
 
     public MessageEvent(int action) {
         this.action = action;
