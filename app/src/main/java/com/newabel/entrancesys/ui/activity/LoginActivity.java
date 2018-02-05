@@ -93,7 +93,8 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.btn_login:
-                mPresenter.login(et_account.getText().toString(),et_pwd.getText().toString());
+//                mPresenter.login(et_account.getText().toString(),et_pwd.getText().toString());
+                startActivity();
                 break;
             case R.id.tv_forget_pwd:
                 intent.setClass(this, ForgetPwdActivity.class);

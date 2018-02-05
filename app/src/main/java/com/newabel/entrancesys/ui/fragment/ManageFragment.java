@@ -2,37 +2,31 @@ package com.newabel.entrancesys.ui.fragment;
 
 import android.Manifest;
 import android.bluetooth.BluetoothDevice;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.newabel.entrancesys.R;
-import com.newabel.entrancesys.service.entity.MessageEvent;
 import com.newabel.entrancesys.service.presenter.BasePresenter;
+import com.newabel.entrancesys.ui.activity.ChatActivity;
 import com.newabel.entrancesys.ui.adapter.ManageAdapter;
 import com.newabel.entrancesys.ui.base.BaseFragment;
-import com.newabel.entrancesys.ui.receiver.BlueToothReceiver;
-import com.newabel.entrancesys.ui.utils.LogUtil;
+import com.newabel.entrancesys.ui.BlueTooth.BlueToothReceiver;
 import com.newabel.entrancesys.ui.utils.PermissionUtils;
 import com.newabel.entrancesys.ui.utils.UIUtils;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
-import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 
 public class ManageFragment extends BaseFragment implements BlueToothReceiver.BluetoothWatcher, BaseQuickAdapter.OnItemClickListener {
@@ -43,8 +37,11 @@ public class ManageFragment extends BaseFragment implements BlueToothReceiver.Bl
 
     @BindView(R.id.rv_list)
     RecyclerView rv_list;
+
+    @BindView(R.id.tv_send)
+    TextView tv_send;
+
     private ManageAdapter adapter;
-    private Handler mHandler;
 
     public ManageFragment() {
 
@@ -63,6 +60,7 @@ public class ManageFragment extends BaseFragment implements BlueToothReceiver.Bl
         if (!PermissionUtils.hasPermissions(getActivity(), permissions)) {
             PermissionUtils.requestPermissions(getActivity(), permissions, REQUEST_CODE_PERMISSION);
         }
+
     }
 
 
@@ -112,6 +110,10 @@ public class ManageFragment extends BaseFragment implements BlueToothReceiver.Bl
         mBlueToothReceiver.unRegisterReceiver();
     }
 
+    @OnClick({R.id.tv_send})
+    public void onClick(View v) {
+        mBlueToothReceiver.send("您好啊");
+    }
 
     @Override
     public void actionFound(BluetoothDevice device, int rssi) {
@@ -134,12 +136,14 @@ public class ManageFragment extends BaseFragment implements BlueToothReceiver.Bl
             mBlueToothReceiver.cancelDiscovery();
             BluetoothDevice device = (BluetoothDevice) mList.get(position).get("device");
 //            mBlueToothReceiver.getBluetoothSocket((BluetoothDevice) mList.get(position).get("device"));
+            Intent intent = new Intent(getContext(), ChatActivity.class);
+            intent.putExtra("BLUETOOTH_DEVICE",device);
             if (device.getBondState() == BluetoothDevice.BOND_BONDED) {
-                mBlueToothReceiver.connect(device);
-                UIUtils.showToast("正在建立链接...");
+                startActivity(intent);
             } else {
-                mBlueToothReceiver.createBound(device);
-                UIUtils.showToast("正在配对...");
+                if(mBlueToothReceiver.createBound(device)){
+                    startActivity(intent);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

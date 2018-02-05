@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/selector_click_style"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_1"
+    >
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_bluetooth"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/iv_head"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=""
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_tittle"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:lines="1"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+</RelativeLayout>

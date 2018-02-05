@@ -14,7 +14,6 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.IBinder;
 import android.os.Vibrator;
-import android.util.Log;
 
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.ui.utils.LogUtil;
@@ -82,6 +81,10 @@ public class MyService extends Service implements SensorEventListener {
 
     class ScreenBroadcastReceiver extends BroadcastReceiver {
 
+//        public ScreenBroadcastReceiver(Context context) {
+//            super(context);
+//        }
+
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null) {
@@ -109,6 +112,7 @@ public class MyService extends Service implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         float[] values = event.values;
+        LogUtil.e(TAG, values[0] + " " + values[1] + " " + values[2]);
         if (Math.abs(values[0]) > 25 || Math.abs(values[1]) > 25 || Math.abs(values[2]) > 25) {
             long currentTimeMillis = System.currentTimeMillis();
             if (currentTimeMillis - lastTimeMillis > 2000) {

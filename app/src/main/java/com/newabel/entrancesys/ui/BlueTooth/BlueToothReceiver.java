@@ -1,12 +1,12 @@
-package com.newabel.entrancesys.ui.receiver;
+package com.newabel.entrancesys.ui.BlueTooth;
 
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothSocket;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
@@ -15,11 +15,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
+import android.os.ParcelUuid;
 import android.support.annotation.RequiresApi;
 
 import com.newabel.entrancesys.ui.utils.LogUtil;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +43,7 @@ public class BlueToothReceiver extends BroadcastReceiver {
     private BluetoothWatcher mBluetoothWatcher;
     private final double pRssi = 59;  //发射端和接收端相隔1米时的信号强 //50
     private final double dFactor = 2.0; //环境衰减因子 //2.5
-    private BluetoothGatt mBluetoothGatt;
+    private static BluetoothGatt mBluetoothGatt;
 
     public BlueToothReceiver(Context context) {
         this.mContext = context;
@@ -175,10 +177,11 @@ public class BlueToothReceiver extends BroadcastReceiver {
 
     /**
      * 蓝牙配对
+     *
      * @param device
      * @return
      */
-    public boolean createBound(BluetoothDevice device){
+    public boolean createBound(BluetoothDevice device) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 return device.createBond();
@@ -187,36 +190,124 @@ public class BlueToothReceiver extends BroadcastReceiver {
                 createBond.setAccessible(true);
                 return (boolean) createBond.invoke(device);
             }
-        }catch (Exception e){
-            LogUtil.e(TAG,e.getMessage());
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
         }
         return false;
     }
 
     /**
      * 取消蓝牙配对
+     *
      * @param device
      * @return
      */
-    public boolean removeBound(BluetoothDevice device){
+    public boolean removeBound(BluetoothDevice device) {
         try {
             Method removeBond = BluetoothDevice.class.getMethod("removeBond");
             removeBond.setAccessible(true);
             return (boolean) removeBond.invoke(device);
-        }catch (Exception e){
-            LogUtil.e(TAG,e.getMessage());
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
         }
         return false;
     }
 
 
-    public boolean connect(BluetoothDevice device) {
+    /**
+     * 重新链接蓝牙
+     *
+     * @param device
+     * @return
+     */
+    public boolean reConnect(BluetoothDevice device) {
         if (hasBluetooth()) {
-            return false;
-        } else {
+            if (isConnect(device)) {
+                mBluetoothGatt.disconnect();
+                mBluetoothGatt.close();
+            }
             mBluetoothGatt = device.connectGatt(mContext, false, new MyBluetoothGattCallback());
         }
-        return true;
+        return isConnect(device);
+    }
+
+    /**
+     * 建立蓝牙链接;
+     *
+     * @param device
+     * @return
+     */
+    public boolean connect(BluetoothDevice device) {
+        if (hasBluetooth()) {
+            if (!isConnect(device)) {
+                mBluetoothGatt = device.connectGatt(mContext, false, new MyBluetoothGattCallback());
+            }
+        }
+        for (ParcelUuid uuid : mBluetoothGatt.getDevice().getUuids()) {
+            LogUtil.e(TAG, "UUID" + uuid.toString());
+        }
+        return isConnect(device);
+    }
+
+    /**
+     * 蓝牙是否链接
+     *
+     * @param device
+     * @return
+     */
+    public boolean isConnect(BluetoothDevice device) {
+        if (mBluetoothGatt != null) {
+            return true;
+        }
+        return false;
+    }
+
+    public void send(String msg) {
+        try {
+
+            String[] uuids1 = new String[]{//honor
+                    "D00001103-0000-1000-8000-00805f9b34fb",
+                    "0000110a-0000-1000-8000-00805f9b34fb",
+                    "00001105-0000-1000-8000-00805f9b34fb",
+                    "00001115-0000-1000-8000-00805f9b34fb",
+                    "00001116-0000-1000-8000-00805f9b34fb",
+                    "0000112d-0000-1000-8000-00805f9b34fb",
+                    "0000110e-0000-1000-8000-00805f9b34fb",
+                    "0000112f-0000-1000-8000-00805f9b34fb",
+                    "00001112-0000-1000-8000-00805f9b34fb",
+                    "0000111f-0000-1000-8000-00805f9b34fb",
+                    "00001132-0000-1000-8000-00805f9b34fb",
+                    "00000000-0000-1000-8000-00805f9b34fb",
+                    "00000000-0000-1000-8000-00805f9b34fb"};
+            String[] uuids2 = new String[]{//mi
+                    "0000110a-0000-1000-8000-00805f9b34fb",
+                    "00001105-0000-1000-8000-00805f9b34fb",
+                    "00001115-0000-1000-8000-00805f9b34fb",
+                    "00001116-0000-1000-8000-00805f9b34fb",
+                    "0000112f-0000-1000-8000-00805f9b34fb",
+                    "00001112-0000-1000-8000-00805f9b34fb",
+                    "0000111f-0000-1000-8000-00805f9b34fb",
+                    "00001132-0000-1000-8000-00805f9b34fb",
+                    "00001132-0000-1000-8000-00805f9b34fb"};
+
+//            for (ParcelUuid uuid : mBluetoothGatt.getDevice().getUuids()) {
+
+            String[] uuids = {"0000111f-0000-1000-8000-00805f9b39fb"};
+            LogUtil.e(TAG, "UUID--->开始");
+            for (String uuid : uuids) {
+                BluetoothGattService service = mBluetoothGatt.getService(UUID.fromString(uuid));
+                LogUtil.e(TAG, String.valueOf(service));
+                if (service == null) {
+                    continue;
+                }
+                BluetoothGattCharacteristic c = service.getCharacteristic(UUID.fromString(uuid));
+                LogUtil.e(TAG, "UUID--->" + uuid);
+                c.setValue(msg);
+                mBluetoothGatt.writeCharacteristic(c);
+            }
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
+        }
     }
 
     /**
@@ -226,13 +317,22 @@ public class BlueToothReceiver extends BroadcastReceiver {
      * @return
      * @throws IOException
      */
-    public BluetoothSocket getBluetoothSocket(BluetoothDevice device) throws IOException {
-        if (mBluetoothSocket != null) {
-            mBluetoothSocket.close();
+    public void sendData(BluetoothDevice device,String msg) throws IOException {
+        try {
+            if (mBluetoothSocket == null || !mBluetoothSocket.isConnected()) {
+                mBluetoothSocket = device.createRfcommSocketToServiceRecord(UUID.fromString("0000111f-0000-1000-8000-00805f9b39fb"));
+                mBluetoothSocket.connect();
+            }
+            OutputStream mOutputStream = mBluetoothSocket.getOutputStream();
+            mOutputStream.write(msg.getBytes("UTF-8"));
+            mOutputStream.flush();
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
+            if(mBluetoothSocket != null) {
+                mBluetoothSocket.close();
+                mBluetoothSocket = null;
+            }
         }
-        mBluetoothSocket = device.createRfcommSocketToServiceRecord(UUID.randomUUID());
-        mBluetoothSocket.connect();
-        return mBluetoothSocket;
     }
 
     class MyBluetoothGattCallback extends BluetoothGattCallback {
@@ -275,8 +375,7 @@ public class BlueToothReceiver extends BroadcastReceiver {
 
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-
-
+            LogUtil.e(TAG, gatt.getDevice().getAddress() + "  " + status);
             super.onServicesDiscovered(gatt, status);
         }
 
@@ -287,11 +386,13 @@ public class BlueToothReceiver extends BroadcastReceiver {
 
         @Override
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+            LogUtil.e(TAG, "onCharacteristicWrite " + status);
             super.onCharacteristicWrite(gatt, characteristic, status);
         }
 
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
+            LogUtil.e(TAG, "onCharacteristicChanged");
             super.onCharacteristicChanged(gatt, characteristic);
         }
 
