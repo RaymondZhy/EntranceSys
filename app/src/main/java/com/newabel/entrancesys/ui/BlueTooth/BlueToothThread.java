@@ -25,6 +25,7 @@ public class BlueToothThread extends Thread {
     private InputStream mInputStream;
     private byte[] mBuffer;
     private Handler mHandler;
+    private boolean isRunning =true;
 
     public BlueToothThread() {
 //        BluetoothServerSocket s = BluetoothAdapter.getDefaultAdapter().listenUsingInsecureRfcommWithServiceRecord();
@@ -41,10 +42,10 @@ public class BlueToothThread extends Thread {
             mBluetoothSocket = mBluetoothServerSocket.accept();
             mInputStream = mBluetoothSocket.getInputStream();
             mBuffer = new byte[8192];
-            while (true) {
+            while (isRunning) {
                 int count = mInputStream.read(mBuffer);
-                String msg = new String(mBuffer, 0, count,"UTF-8");
-                LogUtil.e(TAG, new String(mBuffer, 0, count,"UTF-8"));
+                String msg = new String(mBuffer, 0, count, "UTF-8");
+                LogUtil.e(TAG, new String(mBuffer, 0, count, "UTF-8"));
                 sendMessage(msg);
             }
         } catch (Exception e) {
@@ -77,5 +78,25 @@ public class BlueToothThread extends Thread {
 
     public void setHandler(Handler mHandler) {
         this.mHandler = mHandler;
+    }
+
+
+    public void stopThread() {
+        try {
+            isRunning = false;
+
+            if (mBluetoothServerSocket != null) {
+                mBluetoothSocket.close();
+            }
+            if (mBluetoothSocket != null) {
+                mBluetoothServerSocket.close();
+            }
+
+            if (mInputStream != null) {
+                mInputStream.close();
+            }
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
+        }
     }
 }

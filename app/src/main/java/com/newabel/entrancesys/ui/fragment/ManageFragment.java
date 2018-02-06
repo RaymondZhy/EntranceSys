@@ -141,11 +141,11 @@ public class ManageFragment extends BaseFragment implements BlueToothReceiver.Bl
             BluetoothDevice device = (BluetoothDevice) mList.get(position).get("device");
 //            mBlueToothReceiver.getBluetoothSocket((BluetoothDevice) mList.get(position).get("device"));
             Intent intent = new Intent(getContext(), ChatActivity.class);
-            intent.putExtra("BLUETOOTH_DEVICE", device);
+            intent.putExtra("BLUETOOTH_DEVICE",device);
             if (device.getBondState() == BluetoothDevice.BOND_BONDED) {
                 startActivity(intent);
             } else {
-                if (mBlueToothReceiver.createBound(device)) {
+                if(mBlueToothReceiver.createBound(device)){
                     startActivity(intent);
                 }
             }

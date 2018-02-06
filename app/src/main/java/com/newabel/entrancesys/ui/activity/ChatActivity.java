@@ -41,6 +41,7 @@ public class ChatActivity extends BaseActivity<ChatPresenter> implements ChatVie
     private BlueToothReceiver mBlueToothReceiver;
     private BluetoothDevice mDevice;
     private Handler mHandler;
+    private BlueToothThread mBlueToothThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,14 @@ public class ChatActivity extends BaseActivity<ChatPresenter> implements ChatVie
 //        setContentView(R.layout.activity_chat);
         initViews();
         initListeners();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(mBlueToothThread != null){
+            mBlueToothThread.stopThread();
+        }
+        super.onDestroy();
     }
 
     @Override
@@ -79,7 +88,7 @@ public class ChatActivity extends BaseActivity<ChatPresenter> implements ChatVie
 
         mHandler = new Handler(this);
 
-        BlueToothThread mBlueToothThread = new BlueToothThread();
+        mBlueToothThread = new BlueToothThread();
         mBlueToothThread.setHandler(mHandler);
         mBlueToothThread.start();
     }
