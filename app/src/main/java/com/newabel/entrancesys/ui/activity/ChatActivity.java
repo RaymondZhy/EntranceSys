@@ -108,6 +108,7 @@ public class ChatActivity extends BaseActivity<ChatPresenter> implements ChatVie
                     list.add(map);
                     chatAdapter.notifyDataSetChanged();
                     et_input.setText("");
+                    rv_list.scrollToPosition(list.size() - 1);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -127,6 +128,7 @@ public class ChatActivity extends BaseActivity<ChatPresenter> implements ChatVie
         map.put("body", msg.obj.toString());
         list.add(map);
         chatAdapter.notifyDataSetChanged();
+        rv_list.scrollToPosition(list.size() - 1);
         return false;
     }
 }

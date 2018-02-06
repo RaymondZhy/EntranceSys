@@ -124,7 +124,7 @@ public class BlueToothReceiver extends BroadcastReceiver {
      *
      * @return
      */
-    List<BluetoothDevice> getBondedDevices() {
+    public List<BluetoothDevice> getBondedDevices() {
         Set<BluetoothDevice> set = mBluetoothAdapter.getBondedDevices();
         return set == null ? new ArrayList<BluetoothDevice>() : new ArrayList<>(set);
     }

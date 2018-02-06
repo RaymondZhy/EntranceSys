@@ -16,6 +16,7 @@ import android.os.IBinder;
 import android.os.Vibrator;
 
 import com.newabel.entrancesys.R;
+import com.newabel.entrancesys.ui.BlueTooth.BlueToothReceiver;
 import com.newabel.entrancesys.ui.utils.LogUtil;
 
 public class MyService extends Service implements SensorEventListener {
@@ -27,6 +28,7 @@ public class MyService extends Service implements SensorEventListener {
     private int mStreamID;
     private long lastTimeMillis;
     private ScreenBroadcastReceiver mScreenBroadcastReceiver;
+    private BlueToothReceiver mBlueToothReceiver;
 
     public MyService() {
     }
@@ -37,8 +39,11 @@ public class MyService extends Service implements SensorEventListener {
         registerBroadcastReceiver();
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        LogUtil.e(TAG, String.valueOf(mSensorManager == null));
         mVibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mSoundPool = new SoundPool(1, AudioManager.STREAM_SYSTEM, 5);
+        mBlueToothReceiver = new BlueToothReceiver(this);
+
 
         initShake();
     }
@@ -111,14 +116,19 @@ public class MyService extends Service implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float[] values = event.values;
-        LogUtil.e(TAG, values[0] + " " + values[1] + " " + values[2]);
-        if (Math.abs(values[0]) > 25 || Math.abs(values[1]) > 25 || Math.abs(values[2]) > 25) {
-            long currentTimeMillis = System.currentTimeMillis();
-            if (currentTimeMillis - lastTimeMillis > 2000) {
-                shaking();
-                lastTimeMillis = currentTimeMillis;
+        try {
+            float[] values = event.values;
+            LogUtil.e(TAG, values[0] + " " + values[1] + " " + values[2]);
+            if (Math.abs(values[0]) > 19 || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19) { //华为手机25为最佳，小米19
+                long currentTimeMillis = System.currentTimeMillis();
+                if (currentTimeMillis - lastTimeMillis > 2000) {
+                    shaking();
+                    lastTimeMillis = currentTimeMillis;
+                    mBlueToothReceiver.sendData(mBlueToothReceiver.getBondedDevices().get(0), "恭喜你，摇到一个美女！");
+                }
             }
+        } catch (Exception e) {
+            LogUtil.e(TAG, e.getMessage());
         }
     }
 
