@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.app.constants.Constant;
-import com.newabel.entrancesys.service.helper.GlideHelper;
+import com.newabel.entrancesys.service.helper.Glide.GlideHelper;
 import com.newabel.entrancesys.service.presenter.PersonalInfoPresenter;
 import com.newabel.entrancesys.ui.Builder.PhotoBuilder;
 import com.newabel.entrancesys.ui.base.BaseActivity;

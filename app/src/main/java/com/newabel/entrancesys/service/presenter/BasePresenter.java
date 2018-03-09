@@ -1,8 +1,8 @@
 package com.newabel.entrancesys.service.presenter;
 
 import com.newabel.entrancesys.R;
-import com.newabel.entrancesys.service.RetrofitHelper;
-import com.newabel.entrancesys.service.RetrofitService;
+import com.newabel.entrancesys.service.helper.Retrofit.RetrofitHelper;
+import com.newabel.entrancesys.service.helper.Retrofit.RetrofitService;
 import com.newabel.entrancesys.ui.utils.UIUtils;
 
 import io.reactivex.Observable;

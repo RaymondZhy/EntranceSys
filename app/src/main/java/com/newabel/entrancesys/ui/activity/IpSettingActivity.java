@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.app.constants.Constant;
-import com.newabel.entrancesys.service.RetrofitHelper;
+import com.newabel.entrancesys.service.helper.Retrofit.RetrofitHelper;
 import com.newabel.entrancesys.service.entity.MessageEvent;
 import com.newabel.entrancesys.service.presenter.IpSettingPresenter;
 import com.newabel.entrancesys.ui.base.BaseActivity;

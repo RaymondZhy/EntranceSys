@@ -20,6 +20,15 @@ public class Constant {
 //    public static String APP_SERVER_PORT = "9998";
     public static String APP_SERVER_PORT = "8090";
 
+    /**
+     * 推送服务器地址
+     */
+    public static String ACTIVE_MQ_URL = "192.168.1.4";
+
+    /**
+     * 推送服务器端口号
+     */
+    public static int ACTIVE_MQ_PORT = 1883;
 
     /**
      * 已选中频道的json

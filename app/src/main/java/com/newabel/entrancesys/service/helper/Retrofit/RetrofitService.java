@@ -1,4 +1,4 @@
-package com.newabel.entrancesys.service;
+package com.newabel.entrancesys.service.helper.Retrofit;
 
 import com.newabel.entrancesys.service.entity.Book;
 

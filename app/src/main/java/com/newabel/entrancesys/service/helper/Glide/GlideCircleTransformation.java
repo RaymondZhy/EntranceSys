@@ -1,4 +1,4 @@
-package com.newabel.entrancesys.service.helper;
+package com.newabel.entrancesys.service.helper.Glide;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

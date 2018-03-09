@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.newabel.entrancesys.R;
-import com.newabel.entrancesys.service.Realm.SearchRecord;
+import com.newabel.entrancesys.service.helper.Realm.SearchRecord;
 import com.newabel.entrancesys.service.presenter.SearchRecordPresenter;
 import com.newabel.entrancesys.ui.adapter.SearchRecordAdapter;
 import com.newabel.entrancesys.ui.base.BaseActivity;

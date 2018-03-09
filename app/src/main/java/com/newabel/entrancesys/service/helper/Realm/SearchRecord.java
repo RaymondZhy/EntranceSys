@@ -1,4 +1,4 @@
-package com.newabel.entrancesys.service.Realm;
+package com.newabel.entrancesys.service.helper.Realm;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

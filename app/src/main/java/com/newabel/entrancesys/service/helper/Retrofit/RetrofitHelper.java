@@ -1,4 +1,4 @@
-package com.newabel.entrancesys.service;
+package com.newabel.entrancesys.service.helper.Retrofit;
 
 import com.google.gson.GsonBuilder;
 import com.newabel.entrancesys.app.constants.Constant;

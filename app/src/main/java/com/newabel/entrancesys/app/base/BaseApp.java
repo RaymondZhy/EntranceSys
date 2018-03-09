@@ -9,7 +9,7 @@ import android.support.multidex.MultiDexApplication;
 import android.text.TextUtils;
 
 import com.newabel.entrancesys.app.constants.Constant;
-import com.newabel.entrancesys.service.Realm.BaseRealmHelper;
+import com.newabel.entrancesys.service.helper.Realm.BaseRealmHelper;
 import com.newabel.entrancesys.service.entity.User;
 import com.newabel.entrancesys.ui.handler.CrashHandler;
 import com.newabel.entrancesys.ui.utils.LocaleUtils;

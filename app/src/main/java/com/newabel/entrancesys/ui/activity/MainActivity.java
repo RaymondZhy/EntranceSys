@@ -17,6 +17,8 @@ import com.newabel.entrancesys.ui.fragment.HomeFragment;
 import com.newabel.entrancesys.ui.fragment.ManageFragment;
 import com.newabel.entrancesys.ui.fragment.MeFragment;
 import com.newabel.entrancesys.ui.fragment.InformationFragment;
+import com.newabel.entrancesys.ui.service.ActiveMqService;
+import com.newabel.entrancesys.ui.service.ActiveMqService2;
 import com.newabel.entrancesys.ui.service.MyService;
 import com.newabel.entrancesys.ui.utils.LogUtil;
 import com.newabel.entrancesys.ui.widget.NoScrollViewPager;
@@ -45,8 +47,12 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent service = new Intent(this, MyService.class);
-        startService(service);
+//        Intent service1 = new Intent(this, MyService.class);
+//        startService(service1);
+
+        Intent service2 = new Intent(ActiveMqService2.ACTION_CONNECT);
+        service2.setClass(this,ActiveMqService2.class);
+        startService(service2);
     }
 
     @Override

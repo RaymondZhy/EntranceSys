@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.newabel.entrancesys.R;
-import com.newabel.entrancesys.service.helper.GlideHelper;
+import com.newabel.entrancesys.service.helper.Glide.GlideHelper;
 
 import java.util.List;
 import java.util.Map;

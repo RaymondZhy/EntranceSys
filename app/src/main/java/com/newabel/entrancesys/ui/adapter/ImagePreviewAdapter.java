@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 
-import com.newabel.entrancesys.service.helper.GlideHelper;
+import com.newabel.entrancesys.service.helper.Glide.GlideHelper;
 
 import java.util.ArrayList;
 import java.util.List;

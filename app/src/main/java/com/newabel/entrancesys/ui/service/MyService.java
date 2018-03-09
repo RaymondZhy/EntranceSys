@@ -119,7 +119,7 @@ public class MyService extends Service implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
         try {
             float[] values = event.values;
-            LogUtil.e(TAG, values[0] + " " + values[1] + " " + values[2]);
+//            LogUtil.e(TAG, values[0] + " " + values[1] + " " + values[2]);
             if (Math.abs(values[0]) > 19 || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19) { //华为手机25为最佳，小米19
                 long currentTimeMillis = System.currentTimeMillis();
                 if (currentTimeMillis - lastTimeMillis > 2000) {

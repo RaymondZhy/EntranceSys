@@ -2,7 +2,7 @@ package com.newabel.entrancesys.service.presenter;
 
 import android.text.TextUtils;
 
-import com.newabel.entrancesys.service.Realm.SearchRecord;
+import com.newabel.entrancesys.service.helper.Realm.SearchRecord;
 import com.newabel.entrancesys.ui.utils.DateUitls;
 import java.util.List;
 

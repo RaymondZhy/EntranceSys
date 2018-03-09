@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import com.google.gson.Gson;
 import com.newabel.entrancesys.R;
 import com.newabel.entrancesys.app.constants.Constant;
-import com.newabel.entrancesys.service.RetrofitHelper;
+import com.newabel.entrancesys.service.helper.Retrofit.RetrofitHelper;
 import com.newabel.entrancesys.ui.dialog.LoadingDialog;
 import com.newabel.entrancesys.ui.iview.LoginView;
 import com.newabel.entrancesys.ui.utils.LogUtil;

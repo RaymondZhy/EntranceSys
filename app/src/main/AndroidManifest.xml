@@ -9,8 +9,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- CAMERA权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 震动权限 -->
@@ -129,11 +129,23 @@
         <service
             android:name=".ui.service.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
-        <activity android:name=".ui.activity.ChatActivity"
-            android:screenOrientation="portrait"
-            />
+        <activity
+            android:name=".ui.activity.BluetoothChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MqttChatActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".ui.service.ActiveMqService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ui.service.ActiveMqService2"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
