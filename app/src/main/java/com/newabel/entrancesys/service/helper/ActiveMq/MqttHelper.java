@@ -134,6 +134,13 @@ public class MqttHelper {
         }
     }
 
+//    //publisher=zhangsan&time=2018-03-12-13 14:59:40&type=text&content="您好啊"
+//    public byte[] getBytes(String){
+//
+//
+//    }
+
+
     public boolean isConnect() {
         return mMqttClient != null && mMqttClient.isConnected();
     }
