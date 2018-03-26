@@ -5,10 +5,12 @@ import com.newabel.entrancesys.service.entity.Book;
 import java.util.Map;
 
 import io.reactivex.Observable;
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Query;
@@ -158,5 +160,8 @@ public interface RetrofitService {
      */
     @GET("api/Dept")
     Observable<Map<String, Object>> Dept(@Query("QryType") String qryType, @Query("QryValue") String qryValue);
+
+    @POST("facepp/v3/detect")
+    Observable<Map<String,Object>> detect(@Body MultipartBody body);
 
 }

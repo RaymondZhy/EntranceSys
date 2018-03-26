@@ -6,10 +6,12 @@ import com.newabel.entrancesys.service.entity.User;
 import com.newabel.entrancesys.ui.utils.LogUtil;
 
 import java.io.IOException;
+import java.util.Collections;
 
 import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
@@ -39,17 +41,16 @@ public class RetrofitHelper {
     public static Retrofit getInstance() {
         if (mRetrofit == null) {
             OkHttpClient.Builder mBuild = new OkHttpClient.Builder();
-            if (User.getInstance().getRetCode() == 0) {
+//            if (User.getInstance().getRetCode() == 0) {
                 //用户未登录时和用户登录成功时,为每一次接口调用都添加请求头信息
                 //同时拦截并打印请求request和响应Response数据
                 mBuild.addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         Request request = chain.request().newBuilder()
-                                .addHeader("UserID", User.getInstance().getUserID())
-                                .addHeader("UserKey", User.getInstance().getRetData())
-//                                .addHeader("accept","json")
-//                                .addHeader("content-type","application/json")
+//                                .addHeader("UserID", User.getInstance().getUserID())
+//                                .addHeader("UserKey", User.getInstance().getRetData())
+                                .addHeader("Content-Type","application/x-www-form-urlencoded")
                                 .build();
                         long startTime = System.currentTimeMillis();
                         Response response = chain.proceed(request);
@@ -62,18 +63,16 @@ public class RetrofitHelper {
                         LogUtil.e("ApiRetrofit", "|...Response:" + content);
                         LogUtil.e("ApiRetrofit", "---------------Request End----------------" + duration + "毫秒-------");
 
-//                        Response response = chain.proceed(request);
-//                        LogUtil.e("HTTP",response.body().toString());
                         return response.newBuilder()
                                 .body(ResponseBody.create(mediaType, content))
                                 .build();
                     }
                 });
-            }
-
+//            }
             OkHttpClient mOkHttpClient = mBuild.build();
             mRetrofit = new Retrofit.Builder()
-                    .baseUrl(String.format("http://%s:%s/", Constant.APP_SERVER_URL, Constant.APP_SERVER_PORT))
+//                    .baseUrl(String.format("http://%s:%s/", Constant.APP_SERVER_URL, Constant.APP_SERVER_PORT))
+                    .baseUrl(Constant.FACE_URL)
                     .client(mOkHttpClient)
                     .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//支持Rxjava

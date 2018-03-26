@@ -15,8 +15,10 @@ import com.newabel.entrancesys.service.entity.Column;
 import com.newabel.entrancesys.service.entity.Content;
 import com.newabel.entrancesys.service.entity.MessageEvent;
 import com.newabel.entrancesys.service.presenter.BasePresenter;
+import com.newabel.entrancesys.service.presenter.HomePresenter;
 import com.newabel.entrancesys.ui.activity.MqttChatActivity;
 import com.newabel.entrancesys.ui.base.BaseFragment;
+import com.newabel.entrancesys.ui.iview.HomeView;
 import com.newabel.entrancesys.ui.utils.UIUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -32,7 +34,7 @@ import butterknife.OnClick;
  * Description:
  */
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment<HomePresenter> implements HomeView {
 
     @BindView(R.id.rv_list)
     RecyclerView rv_list;
@@ -65,8 +67,8 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected HomePresenter createPresenter() {
+        return new HomePresenter(this);
     }
 
 
@@ -75,12 +77,15 @@ public class HomeFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.btn_Mqtt})
+    @OnClick({R.id.btn_Mqtt,R.id.btn_face})
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_Mqtt:
                 Intent intent = new Intent(getContext(), MqttChatActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_face:
+                mPresenter.detect();
                 break;
         }
     }

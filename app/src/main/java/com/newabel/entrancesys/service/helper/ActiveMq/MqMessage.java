@@ -55,14 +55,16 @@ public class MqMessage extends MqttMessage {
     }
 
     public MqMessage getMessage(byte[] bytes) {
-        for (int i = 0; i < bytes.length; i++) {
+//        for (int i = 0; i < bytes.length; i++) {
 //            String str = new String(bytes);
 //            String[] strs = str.split(DECOLLATOR);
 //            this.publisher = strs[0].split("=")[1];
 //            this.time = strs[1].split("=")[1];
 //            this.type = strs[2].split("=")[1];
 //            this.content = strs[3].split("=")[1]; //获取文件没写 待写
-        }
+//        }
+//        byte[] b = new byte[16];
+//        System.arraycopy(bytes, 11, b, 11, 16);
         return this;
     }
 

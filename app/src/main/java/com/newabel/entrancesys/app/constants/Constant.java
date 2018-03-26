@@ -12,6 +12,7 @@ public class Constant {
      * App请求的URL地址
      */
     public static String APP_SERVER_URL = "192.168.2.91";
+    public static String FACE_URL = "https://api-cn.faceplusplus.com/";//https://api-cn.faceplusplus.com/facepp/v3/detect
 //    public static String APP_SERVER_URL = "http://218.17.125.117";
 
     /**
